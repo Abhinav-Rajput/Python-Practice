@@ -33,11 +33,12 @@ class LinkedList:
 
     def printList(self):
         temp = self.head
+        print("Hello")
         while(temp):
             print(temp.data)
             temp = temp.next
 
-if __name__=='main':
+if __name__=='__main__':
     llist = LinkedList()
     llist.append(6)
     llist.push(7)
@@ -48,4 +49,5 @@ if __name__=='main':
     print("Created linked list is:")
     llist.printList()
 
+ 
 
