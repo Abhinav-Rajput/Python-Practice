@@ -3,13 +3,16 @@ class Node(object):
         self.data = d
         self.next = None
 
+
 class LinkedList(object):
     def __init__(self):
         self.head = None
+
     def push(self, new_data):
         new_Node = Node(new_data)
         new_Node.next = self.head
         self.head = new_Node
+
     def swapNodes(self, x, y):
         if x == y:
             return
@@ -29,12 +32,12 @@ class LinkedList(object):
 
         if prevX != None:
             prevX.next = currY
-        else: 
+        else:
             self.head = currY
 
         if prevY != None:
             prevY.next = currX
-        else: 
+        else:
             self.head = currX
 
         temp = currX.next
@@ -44,8 +47,9 @@ class LinkedList(object):
     def printList(self):
         tNode = self.head
         while tNode != None:
-            print(tNode.data,end=' ')
+            print(tNode.data, end=' ')
             tNode = tNode.next
+
 
 llist = LinkedList()
 
@@ -57,10 +61,8 @@ llist.push(3)
 llist.push(2)
 llist.push(1)
 
-print ("Linked list before calling swapNodes(4,3) ")
+print("Linked list before calling swapNodes(4,3) ")
 llist.printList()
 llist.swapNodes(4, 3)
-print ("\nLinked list after calling swapNodes(4,3) ")
-llist.printList()            
-
-        
+print("\nLinked list after calling swapNodes(4,3) ")
+llist.printList()
