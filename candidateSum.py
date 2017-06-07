@@ -11,7 +11,6 @@ def hasArrayTwoCandidates(A, arr_size, sum):
             r -= 1
     return 0
 
-
 def quickSort(arr, low, high):
     if low < high:
         pi = partition(arr, low, high)

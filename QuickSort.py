@@ -18,7 +18,6 @@ def partition(arr, low, high):
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     return (i + 1)
 
-
 def quickSort(arr, low, high):
     if low < high:
         pi = partition(arr, low, high)
